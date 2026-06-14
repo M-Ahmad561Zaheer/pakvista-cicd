@@ -2,6 +2,8 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "color-hex-length": "long",
-    "font-family-no-missing-generic-family-keyword": true
+    "font-family-no-missing-generic-family-keyword": true,
+    "color-function-notation": null,
+    "alpha-value-notation": null
   }
 }
