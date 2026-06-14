@@ -2,7 +2,7 @@
   "name": "pakvista-cicd",
   "version": "1.0.0",
   "description": "PakVista - Static Informational Website with DevOps Pipeline",
-  "main": "index.html",
+  
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html --dist-dir dist",
