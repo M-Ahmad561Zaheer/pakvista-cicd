@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          # Cache line removed to prevent missing package-lock.json crash
 
       - name: Install Dependencies
         run: npm install
@@ -36,6 +35,17 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+      - name: Setup Node.js (For Build Context)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Generate Production Build Artifacts
+        run: npm run build
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
