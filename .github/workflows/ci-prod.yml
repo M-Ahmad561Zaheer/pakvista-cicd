@@ -30,12 +30,25 @@ jobs:
       - name: Build with Parcel (Production Check)
         run: npm run build
 
-  docker-push:
+docker-push:
     needs: lint-and-build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+      # --- YEH CODES ADD KARNE HAIN ---
+      - name: Setup Node.js (For Build Context)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Generate Production Build Artifacts
+        run: npm run build
+      # ---------------------------------
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
