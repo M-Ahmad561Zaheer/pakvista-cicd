@@ -1,13 +1,12 @@
 :root {
-  --primary-color: #006644; /* Yeh short nahi ho sakta kyun k patterns match nahi hote */
-  --secondary-color: #f4fbf7; /* Yeh bhi short nahi ho sakta */
+  --primary-color: #006644; 
+  --secondary-color: #f4fbf7; 
   --accent-color: #cc9933; 
-  --text-color: #333333;       /* Shortened from #333333 */
-  --white: #ffffff;            /* Shortened from #ffffff */
-  --gray: #cccccc;             /* Shortened from #cccccc */
+  --text-color: #333333;       
+  --white: #ffffff;           
+  --gray: #cccccc;         
 }
 
-/* Aur neche nav aur footer mein #222222 ko #222 karna hoga */
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,7 +24,7 @@ header {
   text-align: center;
 }
 
-/* Horizontal Navigation Bar Rule */
+
 nav {
   background-color: var(--text-color);
   display: flex;
@@ -75,7 +74,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* Image Placeholder Specification */
+
 .img-placeholder {
   width: 100%;
   max-width: 500px;
