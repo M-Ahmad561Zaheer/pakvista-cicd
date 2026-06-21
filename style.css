@@ -1,12 +1,12 @@
-/* PakVista Shared Design System */
 :root {
-  --primary-color: #006644; /* Beautiful Pakistan Green */
-  --secondary-color: #f4fbf7;
-  --accent-color: #cc9933; /* Golden accents for heritage sites */
-  --text-color: #333333;
-  --white: #ffffff;
-  --gray: #cccccc;
+  --primary-color: #006644; /* Yeh short nahi ho sakta kyun k patterns match nahi hote */
+  --secondary-color: #f4fbf7; /* Yeh bhi short nahi ho sakta */
+  --accent-color: #cc9933; 
+  --text-color: #333;       /* Shortened from #333333 */
+  --white: #fff;            /* Shortened from #ffffff */
+  --gray: #ccc;             /* Shortened from #cccccc */
 }
+/* Aur neche nav aur footer mein #222222 ko #222 karna hoga */
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,7 +26,7 @@ header {
 
 /* Horizontal Navigation Bar Rule */
 nav {
-  background-color: #222222;
+  background-color: var(--text-color);
   display: flex;
   justify-content: center;
   padding: 0.8rem 0;
@@ -93,7 +93,7 @@ p {
 footer {
   text-align: center;
   padding: 1.5rem;
-  background-color: #222222;
+  background-color: var(--text-color);
   color: var(--white);
   margin-top: 3rem;
 }
