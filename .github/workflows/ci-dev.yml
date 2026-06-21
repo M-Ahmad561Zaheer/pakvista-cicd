@@ -21,13 +21,13 @@ jobs:
         run: npm ci
 
       - name: Run HTML Linting
-        run: npx htmlhint *.html
+        run: npm htmlhint *.html
 
       - name: Run CSS Linting
         run: npx stylelint *.css
 
-      - name: Build with Parcel (Production Check)
-        run: npx parcel build index.html --dist-dir dist
+      - name: Build with Parcel
+        run: npm run build
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
