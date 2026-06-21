@@ -1,4 +1,4 @@
-name: ci-prod
+name: ci-production
 
 on:
   pull_request:
@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          
+          cache: 'npm'
 
       - name: Install Dependencies
         run: npm install
@@ -36,19 +36,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
-      # --- Yeh steps humein yahan add karne hain ---
-      - name: Setup Node.js (For Build Context)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Generate Production Build Artifacts
-        run: npm run build
-      # ---------------------------------------------
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
