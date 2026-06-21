@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - develop
+      - feature/umerakramofficial/lahore  # <- Aap ki branch yahan configure ho gayi!
 
 jobs:
   deploy-to-vercel:

@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          
 
       - name: Install Dependencies
         run: npm install
@@ -30,12 +29,26 @@ jobs:
       - name: Build with Parcel (Production Check)
         run: npm run build
 
+      # FIX: Build artifacts ko save karo
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: dist/
+
   docker-push:
     needs: lint-and-build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+      
+      # FIX: Build artifacts ko download karo
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: dist/
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
