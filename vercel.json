@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm ci && npx parcel build index.html --dist-dir dist",
+  "outputDirectory": "dist",
+  "framework": null
+}
