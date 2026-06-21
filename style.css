@@ -6,7 +6,7 @@
   --white: #ffffff;           
   --gray: #cccccc;         
 }
-/* Aur neche nav aur footer mein #222222 ko #222 karna hoga */
+
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,7 +24,7 @@ header {
   text-align: center;
 }
 
-/* Horizontal Navigation Bar Rule */
+
 nav {
   background-color: var(--text-color);
   display: flex;
@@ -74,7 +74,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* Image Placeholder Specification */
+
 .img-placeholder {
   width: 100%;
   max-width: 500px;
