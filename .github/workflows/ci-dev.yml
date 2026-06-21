@@ -18,10 +18,16 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Fix local binaries permissions
+        run: |
+          if [ -d node_modules/.bin ]; then
+            chmod +x node_modules/.bin/* || true
+          fi
 
       - name: Run HTML Linting
-        run: npm run lint:html
+        run: npx htmlhint "*.html"
 
       - name: Run CSS Linting
         run: npm run lint:css
@@ -29,7 +35,6 @@ jobs:
       - name: Build with Parcel (Production Check)
         run: npm run build
 
-      # FIX: Build artifacts ko save karo
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -43,7 +48,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
       
-      # FIX: Build artifacts ko download karo
       - name: Download Build Artifacts
         uses: actions/download-artifact@v4
         with:
