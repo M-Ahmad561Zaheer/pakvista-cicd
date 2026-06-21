@@ -97,3 +97,25 @@ footer {
   color: var(--white);
   margin-top: 3rem;
 }
+
+
+.place-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+figure {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555555;
+}
