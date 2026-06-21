@@ -2,9 +2,9 @@
   --primary-color: #006644; /* Yeh short nahi ho sakta kyun k patterns match nahi hote */
   --secondary-color: #f4fbf7; /* Yeh bhi short nahi ho sakta */
   --accent-color: #cc9933; 
-  --text-color: #333;       /* Shortened from #333333 */
-  --white: #fff;            /* Shortened from #ffffff */
-  --gray: #ccc;             /* Shortened from #cccccc */
+  --text-color: #333333;       /* Shortened from #333333 */
+  --white: #ffffff;            /* Shortened from #ffffff */
+  --gray: #cccccc;             /* Shortened from #cccccc */
 }
 /* Aur neche nav aur footer mein #222222 ko #222 karna hoga */
 
