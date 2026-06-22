@@ -1,12 +1,12 @@
-/* PakVista Shared Design System */
 :root {
-  --primary-color: #006644; /* Beautiful Pakistan Green */
-  --secondary-color: #f4fbf7;
-  --accent-color: #cc9933; /* Golden accents for heritage sites */
-  --text-color: #333333;
-  --white: #ffffff;
-  --gray: #cccccc;
+  --primary-color: #006644; 
+  --secondary-color: #f4fbf7; 
+  --accent-color: #cc9933; 
+  --text-color: #333333;       
+  --white: #ffffff;           
+  --gray: #cccccc;         
 }
+
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,9 +24,9 @@ header {
   text-align: center;
 }
 
-/* Horizontal Navigation Bar Rule */
+
 nav {
-  background-color: #222222;
+  background-color: var(--text-color);
   display: flex;
   justify-content: center;
   padding: 0.8rem 0;
@@ -74,7 +74,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* Image Placeholder Specification */
+
 .img-placeholder {
   width: 100%;
   max-width: 500px;
@@ -93,7 +93,29 @@ p {
 footer {
   text-align: center;
   padding: 1.5rem;
-  background-color: #222222;
+  background-color: var(--text-color);
   color: var(--white);
   margin-top: 3rem;
+}
+
+
+.place-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+figure {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555555;
 }
