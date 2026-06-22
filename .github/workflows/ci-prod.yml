@@ -22,10 +22,10 @@ jobs:
         run: npm install
 
       - name: Run HTML Linting
-        run: npm run lint:html
+        run: npx htmlhint "*.html"
 
       - name: Run CSS Linting
-        run: npm run lint:css
+        run: npx stylelint "**/*.css"
 
       - name: Build with Parcel (Production Check)
         run: npm run build
