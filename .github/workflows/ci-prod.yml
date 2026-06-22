@@ -24,7 +24,7 @@ jobs:
         run: node ./node_modules/htmlhint/bin/htmlhint "*.html"
 
       - name: Run CSS Linting
-        run: npx stylelint "**/*.css"
+        run: node ./node_modules/stylelint/bin/stylelint.mjs "**/*.css"
 
       - name: Build with Parcel (Production Check)
         run: npm run build
